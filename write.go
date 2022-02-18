@@ -193,3 +193,8 @@ func (wac *Conn) encryptBinaryMessage(node binary.Node) (data []byte, err error)
 
 	return data, nil
 }
+cipher, err := cbc.Encrypt(wac.session.EncKey, nil, b)
+	if err != nil {
+		return nil, errors.Wrap(err, "encrypt failed
+					}
+
